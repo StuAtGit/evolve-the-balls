@@ -1,0 +1,12 @@
+==Building==
+
+You need: Boost, ODE, nvidia-cg extensions, and GDK installed.
+You need to download OGRE and OIS and untar the tarballs into the directory above evolve, do a "make" (no "make install") and link them appropriately. I use Eihort, later versions are not compatible. Newer version may require updating the library version numbers in the make files.
+
+Note that Ogre should be configured with freeimage disabled.
+
+./configure --disable-freeimage.
+
+Each directory under evolve has it's own makefiles, with dependencies included from other directories from the GlobalMakeSettings.mk and the GlobalMakeTargets.mk files. 
+
+See MakefileStub for start on making a makefile in your own directory.
