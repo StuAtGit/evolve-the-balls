@@ -1,6 +1,6 @@
 ==Building==
 
-You need: Boost, ODE, nvidia-cg extensions, and GDK installed.
+You need: Boost, ODE, nvidia-cg extensions, and GDK installed. nvidia-cg is for OGRE, and OGRE can be configured to not use it with --disable-cg. I don't use this, so it should be fine, as long as you get OGRE to build without it.
 
 You need to download OGRE and OIS and untar the tarballs into the directory above evolve, do a "make" (no "make install") and create symbolic links to the directories, or just move them into evolve. Symbolic links like so:
 {{{
