@@ -21,7 +21,7 @@ $> ln -s ../ogrenew ogrenew
 $> ln -s ../ois ois
 }}}
 The makefiles in evolve reference the libraries and headers created in ogrenew when you do a "make". This way you can download and use ogre and ois without having to figure out how to install them or overwriting existing installations.
-I use Eihort, later versions are not compatible. Newer version may require updating the library version numbers in the make files.
+I use Eihort, earlier versions are not compatible. Newer version may require updating the library version numbers in the make files.
 
 Note that Ogre should be configured with freeimage disabled.
 
