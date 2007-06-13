@@ -1,13 +1,4 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
-
-Build instructions
-
-
-= Details =
-
-Not finished yet.
+ ==Building==
 
 You need: Boost, ODE, nvidia-cg extensions, and GDK installed.
 You need to download OGRE and OIS and untar the tarballs into the directory above evolve, do a "make" (no "make install") and link them appropriately. I use Eihort, later versions are not compatible. Newer version may require updating the library version numbers in the make files.
