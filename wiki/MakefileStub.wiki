@@ -1,0 +1,25 @@
+{{{
+include ../GlobalMakeSettings.mk
+
+TEST=testObjX
+TEST_CC=testObjX.cc
+OBJ=ObjX.o
+OBJ_CC=ObjX.cc
+#CCFLAGS += 
+
+all:$(TEST_DEPENDS) $(TEST)
+
+TEST_DEPENDS=$(LOGGER) $(COMMON_ASPECT) $(OBJ)
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) $(TEST_CC) -o $(TEST)
+
+include ../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+clean:
+	rm -f $(TEST_DEPENDS)
+	rm -f $(TEST)
+}}}
