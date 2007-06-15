@@ -1,0 +1,10 @@
+#Use git
+
+== Version control ==
+
+I use git locally, and check in a tarball to svn. 
+Makes life much nicer. I can't check-in my git repository (too big).
+So you need to make your own. 
+Which is how it's intended to be anyways.
+
+
