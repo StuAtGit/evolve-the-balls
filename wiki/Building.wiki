@@ -52,6 +52,7 @@ build on windows. (You brave person you)
 
 OGRE and OIS should NOT be installed via your package manager. I don't configure OGRE to use freeimage library for one, and for two, it keeps things clean. That said, you can do it if you want, and if you set it up right, everything should work.
 
-
+Misc:
+  * [http://gpwiki.org/index.php/ODE_Object_tutorial ODE tutorial] - seems decent from glancing at it. Especially since I added some stuff :)
 
 
