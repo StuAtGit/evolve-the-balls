@@ -45,13 +45,12 @@ Client stuff:
   * [http://sourceforge.net/project/showfiles.php?group_id=7586 boost]
 
 And someday, we may just need this to get gtk for the client:
-  *[http://gladewin32.sourceforge.net/modules/wfdownloads/viewcat.php?cid=14 GTK]
+  * [http://gladewin32.sourceforge.net/modules/wfdownloads/viewcat.php?cid=14 GTK]
 
 All this stuff should be available via a decent [http://gentoo-wiki.com/MAN_emerge package manager]. So you really only need to download & install this stuff if you intend 
 build on windows. (You brave person you)
 
 OGRE and OIS should NOT be installed via your package manager. I don't configure OGRE to use freeimage library for one, and for two, it keeps things clean. That said, you can do it if you want, and if you set it up right, everything should work.
-
 
 
 
