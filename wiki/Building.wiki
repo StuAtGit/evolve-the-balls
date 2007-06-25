@@ -34,6 +34,7 @@ See MakefileStub for a start on creating a makefile in your own directory.
 ==Links==
 Basics:
   * [http://www.boost.org/ boost home page]
+  * [http://sourceforge.net/project/showfiles.php?group_id=7586 boost download page]
   * [http://www.cygwin.com/ cygwin] - never tried it with this, but a better place to start than Visual Studio ;)
 
 Client stuff:
@@ -42,7 +43,7 @@ Client stuff:
   * [http://sourceforge.net/project/showfiles.php?group_id=149835 OIS]
   * [http://www.ode.org/ ODE]
   * [http://www.gimp.org/~tml/gimp/win32/downloads.html GTK]
-  * [http://sourceforge.net/project/showfiles.php?group_id=7586 boost]
+
 
 And someday, we may just need this to get gtk for the client:
   * [http://gladewin32.sourceforge.net/modules/wfdownloads/viewcat.php?cid=14 GTK]
@@ -54,5 +55,4 @@ OGRE and OIS should NOT be installed via your package manager. I don't configure
 
 Misc:
   * [http://gpwiki.org/index.php/ODE_Object_tutorial ODE tutorial] - seems decent from glancing at it. Especially since I added some stuff :)
-
 
