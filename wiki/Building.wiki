@@ -27,9 +27,7 @@ Note that Ogre should be configured with freeimage disabled.
 
 ./configure --disable-freeimage.
 
-Each directory under evolve has it's own makefiles, with dependencies included from other directories from the GlobalMakeSettings.mk and the GlobalMakeTargets.mk files. 
-
-See MakefileStub for a start on creating a makefile in your own directory.
+I am currently moving over to autotools for the evolve build system.
 
 ==Links==
 Basics:
@@ -55,4 +53,3 @@ OGRE and OIS should NOT be installed via your package manager. I don't configure
 
 Misc:
   * [http://gpwiki.org/index.php/ODE_Object_tutorial ODE tutorial] - seems decent from glancing at it. Especially since I added some stuff :)
-
