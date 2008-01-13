@@ -1,33 +1,23 @@
 ==Building==
 
-For most of the code, you can get by with just Boost, a C++ compiler, and make. All the other stuff is for the testOgreLearn file, where I'm figuring out how to make the client.
+You should have: Boost, ODE, OGRE, OIS, and GDK installed. 
+This project will probably eventually use QT as well.
 
-But you should have: Boost, ODE, nvidia-cg extensions, and GDK installed. 
+You may want to install: nvidia-cg.
+
+You do not want: freeimage (I supply my own codec handler in OGRE using GDK)
 
 nvidia-cg is for OGRE, and OGRE can be configured to not use it with --disable-cg. I don't use cg in my code, so it should be fine to not have it (I didn't have it for awhile), as long as you get OGRE to build without it.
 
-As far as dependencies of my dependencies, see the respective websites for those projects. 
+For more about the dependencies of my dependencies, see the respective websites for those projects. 
 
-You need to download and build OGRE and OIS.
+You need to download, build, and install OGRE and OIS. I use Eihort (Ogre 1.4.5). Earlier versions won't work. At the very least, you should install OGRE, OIS, ode, and they're respective development headers (the -dev packages). Note the build system currently assumes ogre is installed using the default /usr/local/ install prefix not /usr or /. Once I learn more about autools, I may be able to work around that. Until then, you can update the configure.ac ogre_inc variable if you have it in different places.
  
-untar the tarballs for OGRE and OIS into the directory above evolve, do a "make" (no "make install") and create symbolic links to the directories, or just move them into evolve (but don't commit them if you do!). Symbolic links like so:
-{{{
-$>ls
-evolve
-ogrenew
-ois
-$> cd evolve
-$> ln -s ../ogrenew ogrenew
-$> ln -s ../ois ois
-}}}
-The makefiles in evolve reference the libraries and headers created in ogrenew when you do a "make". This way you can download and use ogre and ois without having to figure out how to install them or overwriting existing installations.
-I use Eihort, earlier versions are not compatible. Newer version may require updating the library version numbers in the make files.
-
 Note that Ogre should be configured with freeimage disabled.
 
 ./configure --disable-freeimage.
 
-I am currently moving over to autotools for the evolve build system.
+I am currently moving from a bunch of custom make files over to autotools for the evolve build system.
 
 ==Links==
 Basics:
