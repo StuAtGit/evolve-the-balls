@@ -1,6 +1,33 @@
 ==Building==
 
-You should have: Boost, ODE, OGRE, OIS, and GDK installed. 
+You should have: Boost, ODE, OGRE, OIS, and GDK (gdk dev headers) installed. 
+
+OGRE/OIS should be installed in usr/include (or update configure.ac accordingly).
+The renderer needs plugins in the local directory. There is a script make_plugins.sh in 
+/src/ogreRenderer
+Edit this script to have it point at the correct locations (currently it assumes ogre libs installed in /usr/local, and source tarball in $HOME)
+
+Then do a 
+
+./configure && make 
+
+from the evolve directory.
+
+cd src/ogreRenderer
+
+./makePlugins.sh
+
+./testOgreRenderer
+
+(to see ?pretty? graphics)
+
+cd src/server
+
+./mommaServer
+
+Runs the server (currently not hooked into ogreRenderer).
+Smoke test used to hook into the server, but now this is being phased into the ogreRender test.
+
 This project will probably eventually use QT as well.
 
 You may want to install: nvidia-cg.
@@ -17,7 +44,7 @@ Note that Ogre should be configured with freeimage disabled.
 
 ./configure --disable-freeimage.
 
-I am currently moving from a bunch of custom make files over to autotools for the evolve build system.
+
 
 ==Links==
 Basics:
