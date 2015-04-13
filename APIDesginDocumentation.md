@@ -1,0 +1,2 @@
+Doxygen docs included in tarball. Also uploaded to svn (code not in svn however).
+Hmmm.. well I did upload to svn, but it appears you can browse to files using googles little svn browser. That's retarded. Maybe I should do sourceforge **sigh**.
