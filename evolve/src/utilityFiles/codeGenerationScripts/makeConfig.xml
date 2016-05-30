@@ -1,0 +1,51 @@
+<evolveHome>
+/home/stu/programming/evolve
+</evolveHome>
+<object>
+    <testName>
+    testReadWriteLock (this should be ignored and assumed for now)
+    </testName>
+    <objectName>
+    ReadWriteLock
+    </objectName>
+    <dependencies>
+        <dependency type="object">
+            <name label="COMMON_ASPECT">
+            CommonAspect.o
+            </name>
+            <location root="evolveHome">
+            /utilityFiles/logger
+            </location>
+        </dependency>
+        <dependency type="object">
+            <name label="LOGGER">
+            Logger.o
+            </name>
+            <location root="evolveHome">
+            /utilityFiles/logger
+            </location>
+        </dependency>
+        <dependency type="includeFile">
+            <name>
+            Utility.h
+            </name>
+            <location root="evolveHome">
+            /utilityFiles
+            </location>
+        </dependency>
+    </dependencies>
+</object>
+<compilerOptions>
+    <compiler>
+    g++
+    </compiler>
+    <compilerFlags>
+    -ggdb3 -Wall -O3
+    </compilerFlags>
+    <linkedLibrary>
+        <include>
+        </include>
+        <libraryName>
+        </libraryName>
+    </linkedLibrary>
+</compilerOptions>

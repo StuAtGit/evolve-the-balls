@@ -1,0 +1,27 @@
+<ProjectDirectoryLocation>
+    <location directory="/home/stu/programming/evolve/">
+</ProjectDirectoryLocation>
+
+<Matrix.h>
+    <relativeLocation directory="utilityFiles" />
+</Matrix.h>
+<Utility.h>
+    <relativeLocation directory="utilityFiles" />
+</Utility.h>
+
+<Sockets.h>
+    <relativeLocation directory="utilityFiles"/>
+    <linkTo type="static" file="utilityFiles/Sockets.o" name="Sockets.o" />
+</Sockets.h>
+<Commands.h>
+    <relativeLocation directory="utilityFiles"/>
+    <linkTo type="static" file="utilityFiles/Commands.o" name="Commands.o" />
+</Commands.h>
+<Logger.h>
+    <relativeLocation directory="utilityFiles"/>
+    <linkTo type="static" file="utilityFiles/Logger.o" name="Logger.o" />
+</Logger.h>
+<Timer.h>
+    <relativeLocation director="utilityFiles/timer"/>
+    <linkTo type="static" file="utilityFiles/timer/Timer.o" name="Timer.o" />
+</Timer.h>

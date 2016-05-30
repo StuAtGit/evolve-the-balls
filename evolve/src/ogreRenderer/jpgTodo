@@ -1,0 +1,3 @@
+OgreJPGCodec compiles, now it must link with test
+Next fix all the bugs.... :|
+ - coding functionality in OgreGDK (see testGDK)

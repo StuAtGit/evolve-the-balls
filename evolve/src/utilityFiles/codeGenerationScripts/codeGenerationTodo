@@ -1,0 +1,16 @@
+Makefile generation -> also should generate a *.dep file for configuration
+generation script..
+
+Code generation -> inheritance (commonAspect class esp.)
+
+Class to scan directories, and generate structure & object information
+ -walk is the method you want!
+ -might want to be able to exclude certain directories from scan (like docs..)
+ -Or not, doc info might be linked into class information
+ -*.dep files needed in each directory listing
+ -Dump this in projectInfo directory?
+
+stuClassGenerator should now:
+ -use the project information to list non-standard header files (and link to docs?)
+ -allow you to specify a folder to write all info too
+ -reviewed for anything to let it be more dynamic...

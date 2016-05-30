@@ -1,0 +1,55 @@
+include ../GlobalMakeSettings.mk
+
+#TEST=testOgreLearn
+#TEST_CC=testOgreLearn.cc
+TEST=testRenderer
+TEST_CC=testRenderer.cc
+OBJ=OISFrame.o
+OBJ_CC=OISFrame.cc
+GDK_OBJ=OgreGDKCodec.o
+GDK_CC=OgreGDKCodec.cc
+Ois_Learn=oisLearn.o
+Ois_Learn_cc=oisLearn.cc
+StandardCamera=StandardCamera.o
+StandardCamera_cc=StandardCamera.cc
+OgreRendererObject = OgreRenderer.o
+OgreRenderer_cc = OgreRenderer.cc
+
+LibOgreRenderer = libOgreRenderer.so
+LibObjs = $(OgreRendererObject) $(StandardCamera) $(GDK_OBJ) $(OBJ)
+
+CCFLAGS += $(GdkFlags)
+
+all:$(TEST_DEPENDS) $(TEST) $(LibOgreRenderer)
+
+#we don't put ogre plugins folder because we use TEST_DEPENDS with CC
+TEST_DEPENDS=$(LOGGER) $(COMMONASPECT) $(TIMER) $(PhysicsEngine)\
+			 $(Ogre)\
+			 $(ODE) $(Lib_Ois)\
+			 $(WorldObject) $(StaticWorldObject)
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS) $(LibOgreRenderer)
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) -L./ -lOgreRenderer -lode $(TEST_CC) -o $(TEST)
+
+include ../GlobalMakeTargets.mk
+
+$(LibOgreRenderer):$(LibObjs)
+	$(CC) $(CCFLAGS) -Wl,-soname,$(LibOgreRenderer) -shared $(LibObjs) -o $(LibOgreRenderer)
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+$(StandardCamera):$(StandardCamera_cc)
+	$(CC) $(CCFLAGS) -c $(StandardCamera_cc) -o $(StandardCamera)
+
+$(OgreRendererObject):$(OgreRenderer_cc)
+	$(CC) $(CCFLAGS) -c $(OgreRenderer_cc) -o $(OgreRendererObject)
+
+$(GDK_OBJ):$(GDK_CC)
+	$(CC) $(CCFLAGS) -c $(GDK_CC) -o $(GDK_OBJ)
+
+clean:
+	rm -f $(TEST_DEPENDS)
+	rm -f $(TEST)
+	rm -f $(LibOgreRenderer)
+	rm -f $(LibObjs)

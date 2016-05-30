@@ -1,0 +1,22 @@
+include ../../GlobalMakeSettings.mk
+
+OBJECT=Timer.o
+OBJECT_CC=Timer.cc
+OBJECT_H=Timer.h
+TEST=testTimer
+TEST_CC=testTimer.cc
+TEST_DEPENDS=$(OBJECT) $(COMMONASPECT) $(LOGGER)
+
+$(TEST):$(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_CC) $(TEST_DEPENDS) -o $(TEST)
+
+include ../../GlobalMakeTargets.mk
+
+$(OBJECT):$(OBJECT_DEPENDS)
+	$(CC) $(CCFLAGS) -c $(OBJECT_CC) -o $(OBJECT)
+
+.PHONY:clean
+
+clean:
+	rm -f $(TEST)
+	rm -f $(TEST_DEPENDS)

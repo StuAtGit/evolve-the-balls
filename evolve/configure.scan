@@ -1,0 +1,71 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ(2.61)
+AC_INIT(FULL-PACKAGE-NAME, VERSION, BUG-REPORT-ADDRESS)
+AC_CONFIG_SRCDIR([src/system/System.h])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_MAKE_SET
+
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lDefaultCommandHandler':
+AC_CHECK_LIB([DefaultCommandHandler], [main])
+# FIXME: Replace `main' with a function in `-lOgreRenderer':
+AC_CHECK_LIB([OgreRenderer], [main])
+# FIXME: Replace `main' with a function in `-ldl':
+AC_CHECK_LIB([dl], [main])
+# FIXME: Replace `main' with a function in `-lode':
+AC_CHECK_LIB([ode], [main])
+# FIXME: Replace `main' with a function in `-lpthread':
+AC_CHECK_LIB([pthread], [main])
+
+# Checks for header files.
+AC_PATH_X
+AC_HEADER_STDC
+AC_CHECK_HEADERS([arpa/inet.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
+AC_C_CONST
+AC_C_INLINE
+AC_HEADER_TIME
+
+# Checks for library functions.
+AC_FUNC_FORK
+AC_FUNC_MALLOC
+AC_TYPE_SIGNAL
+AC_CHECK_FUNCS([gettimeofday memset socket sqrt strerror])
+
+AC_CONFIG_FILES([Makefile
+                 src/Makefile
+                 src/commonAspect/Makefile
+                 src/interpreter/lSystemInterpreter/Makefile
+                 src/ogreRenderer/Makefile
+                 src/physicsEngine/Makefile
+                 src/server/Makefile
+                 src/server/clientInterfaceGenerator/Makefile
+                 src/server/commandHandler/Makefile
+                 src/server/interpreterCommandHandler/Makefile
+                 src/server/systemCommandHandler/Makefile
+                 src/smokeTest/Makefile
+                 src/system/lSystem/Makefile
+                 src/utilityFiles/Makefile
+                 src/utilityFiles/commands/Makefile
+                 src/utilityFiles/logger/Makefile
+                 src/utilityFiles/matrix/Makefile
+                 src/utilityFiles/mutex/Makefile
+                 src/utilityFiles/readWriteLock/Makefile
+                 src/utilityFiles/socketMethods/Makefile
+                 src/utilityFiles/timer/Makefile
+                 src/worldObject/Makefile
+                 src/worldObject/staticSphereObject/Makefile
+                 src/worldObject/staticWorldObject/Makefile])
+AC_CONFIG_SUBDIRS([ogrenew
+                   ois
+                   src/ogrenew
+                   src/ois])
+AC_OUTPUT

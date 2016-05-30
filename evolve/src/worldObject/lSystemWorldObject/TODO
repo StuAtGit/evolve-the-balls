@@ -1,0 +1,6 @@
+Fix "file not found" errors with no *.sys *.attr files (oop)... hmmm.. shouldn't this bee in initialize... maybe just check return values (sheepishly)
+
+Growth Rate (sleep when not updating growth)
+
+Physics!
+

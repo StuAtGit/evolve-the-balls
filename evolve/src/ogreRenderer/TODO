@@ -1,0 +1,65 @@
+
+-->>>more flexible renderer config. (speed, number, verbose, physics! (on/off))
+  - better config handling in project in general. Boost config
+
+-interpreter
+  - stop handling joints "differently". Just use MeshMap config..
+  - better meshMap config (see above)
+
+Ok, dWorldQuickStep helped with these enough so I can put them aside.
+  But we definitely want to look at improving the safety & performance of physics as a constant goal...
+ - AAAH. Physics slow and it seg faults when objects grow into each other 
+      & "overlap" so we can't do that. But this means collision detection 
+      everytime time we grow :( 
+        - sanity check in PhysicsEngine "add"? Somehow pipeline this with
+          collision detection? (pipe dream :|)
+          (hrm reverse hash of center points -> radiuses.
+          look up all points in our radius. Hrm maybe just a sorted
+          list would work better. Think about this. For islands as well
+          (see below).
+  - physics is tooo sloow.
+    - try caching positions in getPositions() and see if:
+      - we actually ever use the cached position
+      - it actually helps
+    - try ignoring collisions in two bodies somehow?
+    - thread collision handling... somehow?
+    - islands... somehow ? ;)
+
+    Ask ODE about: overlapping, threading? reverse lookup vs hash map/islands
+
+-joints 
+  - slider joints/motors
+    - figure out how to set axis' properly in a clean fashion 
+      - note that we try to do this with slider, but it seg faults...
+    - factor out joint property constants in slider & universal
+    - figure out which motor properties to set up..
+  - clean interface for making spaces/defining planes that 
+    objects do not grow into (help with falling through the floor
+    problem...)
+  - interpreter bug? U,D goes left,right?
+  - breeding
+   - group ids in physics to know when we hit someone else.
+  - sensors?
+
+- be so happy when I get here :) :) 
+
+- Cutie
+
+Then I will be sooo... close.... ahhhh!
+
+figure out:
+    - (this may just be out, make one mesh for each part, 
+       mesh can have whatever sub-geometry it wants..)...
+       join parts into one system (use addItem( box ) in physicsEngine, 
+      need to extend LSystem interpreter to handle language that says
+      "these are all part of one physical object", and tracking the extents
+       of that physical object (length may be easy, width/height of "face" of
+       a box might be harder)
+
+    slider joint
+    how to stabilize bodies so they are smoother
+      - join some parts together into one body (but not all!)
+      - learn how to use ODE better
+make pyramid mesh?
+double check breed ok (with no physics, low count)
+learn how to use OGRE better to speed up frame rate (lights/materials/textures/etc)

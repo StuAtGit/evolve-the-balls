@@ -1,0 +1,12 @@
+maxSize 100
+minSize 1
+options L,R,S 
+system Y
+#mutation rules key
+#1)the entry is swapped with one of it's neighbors
+#2)the entry is toggled to one of it's possible options
+#3)the entry is deleted
+#4)the entry is doubled
+mutationRules (1,1000) (2,80) (3,3) (4,19) 
+growthRules Y:U,S,S,S,S,S,B1,S,S,S,S,S,S,B2,S,S,S,S,R,S.B1:[,R,S,S,S,S,S,B2,S,S,S,S,S,].B2:[,L,S,S,S,B1,S,S,S,S,]
+currentGene 27

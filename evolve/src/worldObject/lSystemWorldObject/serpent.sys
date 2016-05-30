@@ -1,0 +1,19 @@
+maxSize 100
+minSize 1
+options L,R,S 
+system Y
+#mutation rules key
+#1)the entry is swapped with one of it's neighbors
+#2)the entry is toggled to one of it's possible options
+#3)the entry is deleted
+#4)the entry is doubled
+mutationRules (1,100) (2,80) (3,3) (4,100) 
+growthRules Y:S,S,BL,BR,S,S.BL:[L,S,S,Y].BR:[R,S,S,Y]
+numSteps 0
+numSwaps 0
+swappedLeft 0
+swappedRight 0
+numToggled 0
+numDeleted 0
+numDoubled 0
+currentGene 0

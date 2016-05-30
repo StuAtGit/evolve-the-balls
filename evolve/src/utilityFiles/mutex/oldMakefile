@@ -1,0 +1,20 @@
+include ../../GlobalMakeSettings.mk
+
+TEST=testMutex
+TEST_CC=testMutex.cc
+OBJ=Mutex.o
+OBJ_CC=Mutex.cc
+OBJ_H=Mutex.h
+TEST_DEPENDS=$(LOGGER) $(COMMONASPECT) $(OBJ)
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS)  
+	$(CC) $(CCFLAGS) $(TEST_CC) -lpthread $(TEST_DEPENDS) -o $(TEST)
+
+include ../../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+clean:
+	rm -f $(TEST) 
+	rm -f $(TEST_DEPENDS)

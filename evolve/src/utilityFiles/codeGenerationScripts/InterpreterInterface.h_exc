@@ -1,0 +1,47 @@
+#ifndef Stu_InterpreterInterface_H
+#define Stu_InterpreterInterface_H
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include "LSystem.h"
+#include "Commands.h"
+#include "Sockets.h"
+
+#define DO_DEBUG true
+
+using namespace std;
+
+/**See interpreter for class comments*/
+class InterpreterInterface : public Interpreter
+{
+public:
+    InterpreterInterface( const string& id );
+    ~InterpreterInterface();
+    bool createRemote( const string& id, const string& ip, int port,bool printDebug = DO_DEBUG );
+    bool getSystem( string& interpreterSystem, LSystem& lsystem, unsigned int start, unsigned int finish,bool printDebug = DO_DEBUG );
+    bool saveAttributes( const string& filename,bool printDebug = DO_DEBUG );
+    bool loadAttributes( const string& filename,bool printDebug = DO_DEBUG );
+    bool setAttributes( const map<string,string>& attributes,bool printDebug = DO_DEBUG );
+    bool setId( const string& id,bool printDebug = DO_DEBUG );
+    map<string,string> getAttributes( bool printDebug = DO_DEBUG );
+    string getAttributeValue( const string& attributeName,bool printDebug = DO_DEBUG );
+    string getAttributeDescription( const string& attributeName,bool printDebug = DO_DEBUG );
+    vector<string> getSupportedAttributes( bool printDebug = DO_DEBUG );
+    bool isSupported( const string& attributeName,bool printDebug = DO_DEBUG );
+    bool getCopy( Interpreter*& copy,bool printDebug = DO_DEBUG );
+    bool getId( string& id,bool printDebug = DO_DEBUG );
+private:
+    Sockets socketMethods;
+    int socket;
+    Commands commands;
+    string id;
+    //ip & port are stored for the getCopy method
+    string ip;    
+    string port;
+};
+
+#endif

@@ -1,0 +1,24 @@
+include ../../GlobalMakeSettings.mk
+
+OBJECT=SocketMethods.o
+OBJECT_CC=SocketMethods.cc
+OBJECT_H=SocketMethods.h
+OBJECT_DEPENDS=SocketMethods.cc SocketMethods.h
+TEST=testSocketMethods
+TEST_CC=testSocketMethods.cc
+TIMER=Timer.o
+TEST_DEPENDS=$(OBJECT) $(TIMER) $(COMMONASPECT) $(LOGGER) $(COMMANDS)
+
+$(TEST):$(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) $(TEST_CC) -o $(TEST)
+
+include ../../GlobalMakeTargets.mk
+
+$(OBJECT):$(OBJECT_DEPENDS)
+	$(CC) $(CCFLAGS) -c $(OBJECT_CC) -o $(OBJECT)
+
+.PHONY:clean
+
+clean:
+	rm -f $(TEST)
+	rm -f $(TEST_DEPENDS)

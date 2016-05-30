@@ -1,0 +1,13 @@
+Building
+-----------------
+See wiki page for installing prerequisites
+autoreconf
+./configure
+make
+
+Running
+----------------
+[Not up yet, in the middle of autoconf conversion]
+src/server/mommaServer
+src/smokeTest/smokeTest
+

@@ -1,0 +1,395 @@
+20:40:33: Creating resource group General
+20:40:33: Creating resource group Internal
+20:40:33: Creating resource group Autodetect
+20:40:33: SceneManagerFactory for type 'DefaultSceneManager' registered.
+20:40:33: Registering ResourceManager for type Material
+20:40:33: Registering ResourceManager for type Mesh
+20:40:33: Registering ResourceManager for type Skeleton
+20:40:33: MovableObjectFactory for type 'ParticleSystem' registered.
+20:40:33: OverlayElementFactory for type Panel registered.
+20:40:33: OverlayElementFactory for type BorderPanel registered.
+20:40:33: OverlayElementFactory for type TextArea registered.
+20:40:33: Registering ResourceManager for type Font
+20:40:33: ArchiveFactory for archive type FileSystem registered.
+20:40:33: ArchiveFactory for archive type Zip registered.
+20:40:33: DevIL version: Developer's Image Library (DevIL) 1.6.7 Oct 27 2007
+20:40:33: DevIL image formats: bmp dib cut dcx dds gif hdr ico cur jpg jpe jpeg lif mdl mng jng pcx pic pix png pbm pgm pnm ppm psd pdd psp pxr sgi bw rgb rgba tga vda icb vst tif tiff wal xpm raw 
+20:40:33: DDS codec registering
+20:40:33: Registering ResourceManager for type HighLevelGpuProgram
+20:40:33: Registering ResourceManager for type Compositor
+20:40:33: MovableObjectFactory for type 'Entity' registered.
+20:40:33: MovableObjectFactory for type 'Light' registered.
+20:40:33: MovableObjectFactory for type 'BillboardSet' registered.
+20:40:33: MovableObjectFactory for type 'ManualObject' registered.
+20:40:33: MovableObjectFactory for type 'BillboardChain' registered.
+20:40:33: MovableObjectFactory for type 'RibbonTrail' registered.
+20:40:33: Loading library ./RenderSystem_GL.so
+20:40:33: Installing plugin: GL RenderSystem
+20:40:33: OpenGL Rendering Subsystem created.
+20:40:33: Plugin successfully installed
+20:40:33: Loading library ./Plugin_ParticleFX.so
+20:40:33: Installing plugin: ParticleFX
+20:40:33: Particle Emitter Type 'Point' registered
+20:40:33: Particle Emitter Type 'Box' registered
+20:40:33: Particle Emitter Type 'Ellipsoid' registered
+20:40:33: Particle Emitter Type 'Cylinder' registered
+20:40:33: Particle Emitter Type 'Ring' registered
+20:40:33: Particle Emitter Type 'HollowEllipsoid' registered
+20:40:33: Particle Affector Type 'LinearForce' registered
+20:40:33: Particle Affector Type 'ColourFader' registered
+20:40:33: Particle Affector Type 'ColourFader2' registered
+20:40:33: Particle Affector Type 'ColourImage' registered
+20:40:33: Particle Affector Type 'ColourInterpolator' registered
+20:40:33: Particle Affector Type 'Scaler' registered
+20:40:33: Particle Affector Type 'Rotator' registered
+20:40:33: Particle Affector Type 'DirectionRandomiser' registered
+20:40:33: Particle Affector Type 'DeflectorPlane' registered
+20:40:33: Plugin successfully installed
+20:40:33: Loading library ./Plugin_BSPSceneManager.so
+20:40:33: Installing plugin: BSP Scene Manager
+20:40:33: Plugin successfully installed
+20:40:33: Loading library ./Plugin_OctreeSceneManager.so
+20:40:33: Installing plugin: Octree & Terrain Scene Manager
+20:40:33: Plugin successfully installed
+20:40:33: *-*-* OGRE Initialising
+20:40:33: *-*-* Version 1.4.5 (Eihort)
+20:40:33: Creating resource group Bootstrap
+20:40:33: Added resource location './Media/packs/OgreCore.zip' of type 'Zip' to resource group 'Bootstrap'
+20:40:33: Added resource location './Media' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/fonts' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/materials/programs' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/materials/scripts' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/materials/textures' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/models' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/overlays' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/particle' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/gui' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/DeferredShadingMedia' of type 'FileSystem' to resource group 'General'
+20:40:33: Added resource location './Media/packs/cubemap.zip' of type 'Zip' to resource group 'General'
+20:40:33: Added resource location './Media/packs/cubemapsJS.zip' of type 'Zip' to resource group 'General'
+20:40:33: Added resource location './Media/packs/dragon.zip' of type 'Zip' to resource group 'General'
+20:40:33: Added resource location './Media/packs/fresneldemo.zip' of type 'Zip' to resource group 'General'
+20:40:33: Added resource location './Media/packs/ogretestmap.zip' of type 'Zip' to resource group 'General'
+20:40:33: Added resource location './Media/packs/skybox.zip' of type 'Zip' to resource group 'General'
+20:40:42: CPU Identifier & Features
+20:40:42: -------------------------
+20:40:42:  *   CPU ID: Unknown
+20:40:42: -------------------------
+20:40:42: ******************************
+*** Starting GLX Subsystem ***
+******************************
+20:40:42: GLRenderSystem::createRenderWindow "ogre", 1024x768 windowed  miscParams: title=Stu 
+20:40:42: GLXWindow::create
+20:40:42: Parsing miscParams
+20:40:42: GLXWindow::create -- Best visual is 35
+20:40:43: GL_VERSION = 2.1.7412 Release
+20:40:43: GL_VENDOR = ATI Technologies Inc.
+20:40:43: GL_RENDERER = ATI Radeon Xpress Series
+20:40:43: GL_EXTENSIONS = GL_AMD_performance_monitor GL_ARB_depth_texture GL_ARB_draw_buffers GL_ARB_fragment_program GL_ARB_fragment_shader GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_shader_objects GL_ARB_shading_language_100 GL_ARB_shadow GL_ARB_shadow_ambient GL_ARB_texture_border_clamp GL_ARB_texture_compression GL_ARB_texture_cube_map GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_float GL_ARB_texture_mirrored_repeat GL_ARB_texture_rectangle GL_ARB_transpose_matrix GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_envmap_bumpmap GL_ATI_fragment_shader GL_ATI_meminfo GL_ATI_separate_stencil GL_ATI_texture_env_combine3 GL_ATI_texture_float GL_EXT_abgr GL_EXT_bgra GL_EXT_blend_color GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_copy_texture GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_object GL_EXT_gpu_program_parameters GL_EXT_multi_draw_arrays GL_EXT_packed_depth_stencil GL_EXT_packed_pixels GL_EXT_point_parameters GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_specular_color GL_EXT_shadow_funcs GL_EXT_stencil_wrap GL_EXT_subtexture GL_EXT_texgen_reflection GL_EXT_texture3D GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_add GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_rectangle GL_EXT_texture_sRGB GL_EXT_vertex_array GL_KTX_buffer_region GL_NV_blend_square GL_NV_texgen_reflection GL_SGIS_generate_mipmap GL_SGIS_texture_edge_clamp GL_SGIS_texture_lod GL_WIN_swap_hint WGL_EXT_swap_control 
+20:40:43: ***************************
+20:40:43: *** GL Renderer Started ***
+20:40:43: ***************************
+20:40:43: Registering ResourceManager for type GpuProgram
+20:40:43: GLSL support detected
+20:40:43: GL: Using framebuffer copy for rendering to textures (worst)
+20:40:43: GL: Warning: RenderTexture size is restricted to size of framebuffer. If you are on Linux, consider using GLX instead of SDL.
+20:40:43: RenderSystem capabilities
+20:40:43: -------------------------
+20:40:43:  * Hardware generation of mipmaps: yes
+20:40:43:  * Texture blending: yes
+20:40:43:  * Anisotropic texture filtering: yes
+20:40:43:  * Dot product texture operation: yes
+20:40:43:  * Cube mapping: yes
+20:40:43:  * Hardware stencil buffer: yes
+20:40:43:    - Stencil depth: 8
+20:40:43:    - Two sided stencil support: yes
+20:40:43:    - Wrap stencil values: yes
+20:40:43:  * Hardware vertex / index buffers: yes
+20:40:43:  * Vertex programs: yes
+20:40:43:    - Max vertex program version: arbvp1
+20:40:43:  * Fragment programs: yes
+20:40:43:    - Max fragment program version: arbfp1
+20:40:43:  * Texture Compression: yes
+20:40:43:    - DXT: yes
+20:40:43:    - VTC: no
+20:40:43:  * Scissor Rectangle: yes
+20:40:43:  * Hardware Occlusion Query: yes
+20:40:43:  * User clip planes: yes
+20:40:43:  * VET_UBYTE4 vertex element type: yes
+20:40:43:  * Infinite far plane projection: yes
+20:40:43:  * Hardware render-to-texture: no
+20:40:43:  * Floating point textures: yes
+20:40:43:  * Non-power-of-two textures: no
+20:40:43:  * Volume textures: yes
+20:40:43:  * Multiple Render Targets: 1
+20:40:43:  * Point Sprites: yes
+20:40:43:  * Extended point parameters: yes
+20:40:43:  * Max Point Size: 8192
+20:40:43:  * Vertex texture fetch: no
+20:40:43: Registering ResourceManager for type Texture
+20:40:43: ResourceBackgroundQueue - threading disabled
+20:40:43: Particle Renderer Type 'billboard' registered
+20:40:43: SceneManagerFactory for type 'BspSceneManager' registered.
+20:40:43: Registering ResourceManager for type BspLevel
+20:40:43: SceneManagerFactory for type 'OctreeSceneManager' registered.
+20:40:43: SceneManagerFactory for type 'TerrainSceneManager' registered.
+20:40:43: Parsing scripts for resource group Autodetect
+20:40:43: Finished parsing scripts for resource group Autodetect
+20:40:43: Parsing scripts for resource group Bootstrap
+20:40:43: Parsing script OgreCore.material
+20:40:43: Parsing script OgreProfiler.material
+20:40:43: Parsing script Ogre.fontdef
+20:40:43: Parsing script OgreDebugPanel.overlay
+20:40:43: Texture: New_Ogre_Border_Center.png: Loading 1 faces(PF_A8B8G8R8,256x128x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+20:40:43: Texture: New_Ogre_Border.png: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+20:40:43: Texture: New_Ogre_Border_Break.png: Loading 1 faces(PF_A8B8G8R8,32x32x1) with 5 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,32x32x1.
+20:40:43: Font BlueHighwayusing texture size 512x512
+20:40:43: Info: Freetype returned null for character 127 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 128 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 129 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 130 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 131 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 132 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 133 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 134 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 135 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 136 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 137 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 138 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 139 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 140 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 141 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 142 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 143 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 144 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 145 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 146 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 147 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 148 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 149 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 150 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 151 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 152 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 153 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 154 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 155 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 156 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 157 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 158 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 159 in font BlueHighway
+20:40:43: Info: Freetype returned null for character 160 in font BlueHighway
+20:40:43: Texture: BlueHighwayTexture: Loading 1 faces(PF_BYTE_LA,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_BYTE_LA,512x512x1.
+20:40:43: Texture: ogretext.png: Loading 1 faces(PF_A8B8G8R8,256x128x1) with 8 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+20:40:43: Parsing script OgreLoadingPanel.overlay
+20:40:43: Finished parsing scripts for resource group Bootstrap
+20:40:43: Parsing scripts for resource group General
+20:40:43: Parsing script Examples.program
+20:40:43: GLSL compiled : Ogre/BasicVertexPrograms/AmbientOneTextureGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Ogre/HardwareSkinningTwoWeightsGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script StdQuad_vp.program
+20:40:43: Parsing script deferred_post_onepass.glsl.program
+20:40:43: GLSL compiled : DeferredShading/post/glsl/vsVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : DeferredShading/post/glsl/SinglePass_psFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script deferred_post_onepass.hlsl.program
+20:40:43: Parsing script deferred_post_debug.glsl.program
+20:40:43: GLSL compiled : DeferredShading/post/glsl/ShowNormal_psFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : DeferredShading/post/glsl/ShowDS_psFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : DeferredShading/post/glsl/ShowColour_psFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script deferred_post_multipass.hlsl.program
+20:40:43: Parsing script deferred_post_minilight.hlsl.program
+20:40:43: Parsing script deferred.hlsl.program
+20:40:43: Parsing script deferred_post_minilight.glsl.program
+20:40:43: GLSL compiled : DeferredShading/post/glsl/LightMaterial_vsVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : DeferredShading/post/glsl/LightMaterial_psFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script deferred_post_debug.hlsl.program
+20:40:43: Parsing script deferred.glsl.program
+20:40:43: GLSL compiled : DeferredShading/material/glsl/psFragment shader was successfully compiled to run on hardware.
+WARNING: 1:27: extension 'GL_ARB_draw_buffers' is not supported
+20:40:43: GLSL compiled : DeferredShading/material/glsl/notex_psFragment shader was successfully compiled to run on hardware.
+WARNING: 1:27: extension 'GL_ARB_draw_buffers' is not supported
+20:40:43: GLSL compiled : DeferredShading/material/glsl/nm_psFragment shader was successfully compiled to run on hardware.
+WARNING: 1:27: extension 'GL_ARB_draw_buffers' is not supported
+20:40:43: GLSL compiled : DeferredShading/material/glsl/nm_notex_psFragment shader was successfully compiled to run on hardware.
+WARNING: 1:27: extension 'GL_ARB_draw_buffers' is not supported
+20:40:43: Parsing script deferred_post_multipass.glsl.program
+20:40:43: GLSL compiled : DeferredShading/post/glsl/Ambient_psFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : DeferredShading/post/glsl/GlobalLight_psFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script Example.material
+20:40:43: GLSL compiled : Ogre/HardwareSkinningTwoWeightsShadowCasterGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script Posterize.material
+20:40:43: Parsing script RZR-002.material
+20:40:43: Parsing script OldTV.material
+20:40:43: Parsing script Example-DynTex.material
+20:40:43: Parsing script Embossed.material
+20:40:43: Parsing script Example-Water.material
+20:40:43: Parsing script Ogre.material
+20:40:43: Parsing script facial.material
+20:40:43: Parsing script Bloom.material
+20:40:43: GLSL compiled : Blur_ps_glslFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Blur0_vs_glslVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Blur1_vs_glslVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script smoke.material
+20:40:43: Parsing script SharpenEdges.material
+20:40:43: Parsing script instancing.material
+20:40:43: GLSL compiled : InstancingGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : InstancingShadowCasterGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : CrowdGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : CrowdShadowCasterGLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script DOF.material
+20:40:43: Parsing script VarianceShadowmap.material
+20:40:43: Parsing script Glass.material
+20:40:43: Parsing script BlackAndWhite.material
+20:40:43: Parsing script Ocean.material
+20:40:43: GLSL compiled : GLSL/OceanVSVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : GLSL/OceanFSFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : GLSL/Ocean2VSVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : GLSL/Ocean2FSFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script Invert.material
+20:40:43: Parsing script OldMovie.material
+20:40:43: Parsing script Examples-Advanced.material
+20:40:43: Parsing script OffsetMapping.material
+20:40:43: GLSL compiled : Examples/OffsetMappingIntegratedShadowsFPglslFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Examples/OffsetMappingIntegratedShadowsVPglslVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script Hurt.material
+20:40:43: Parsing script Laplace.material
+20:40:43: Parsing script HeatVision.material
+20:40:43: Parsing script MotionBlur.material
+20:40:43: Parsing script Tiling.material
+20:40:43: Parsing script hdr.material
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/downscale2x2LuminenceGLSL_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/StdQuad_GLSL_vpVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/downscale3x3GLSL_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/utils_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/downscale3x3brightpassGLSL_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/bloomGLSL_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/utils_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/Compositor/HDR/finaltonemappingGLSL_fpFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script DepthShadowmap.material
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/CasterVP_GLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/ReceiverVP_GLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/ReceiverFP_GLSLFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/ReceiverFPPCF_GLSLFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/NormalMapReceiverVP_GLSLVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/NormalMapReceiverFP_GLSLFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/NormalMapReceiverFPPCF_GLSLFragment shader was successfully compiled to run on hardware.
+20:40:43: GLSL compiled : Ogre/DepthShadowmap/CasterFP_GLSLFragment shader was successfully compiled to run on hardware.
+20:40:43: Parsing script deferred_post_minilight.material
+20:40:43: Parsing script deferred_post_onepass.material
+20:40:43: Parsing script deferred_post_debug.material
+20:40:43: Parsing script deferreddemo.material
+20:40:43: Error at line 22 of deferreddemo.material: parent material: DeferredShading/Material/TexturedPhong not found for new material:Test13/Ground
+20:40:43: Error at line 47 of deferreddemo.material: parent material: DeferredShading/Material/TexturedNormalMapped not found for new material:Test13/RockWall
+20:40:43: Error at line 81 of deferreddemo.material: parent material: DeferredShading/Material/UntexturedNormalMapped not found for new material:Test13/DeferredAthena
+20:40:43: Error in material Test13/DeferredAthena at line 91 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error in material Test13/DeferredAthena at line 105 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error at line 114 of deferreddemo.material: parent material: DeferredShading/Material/TexturedPhong not found for new material:Test13/DeferredOgre/Skin
+20:40:43: Error at line 141 of deferreddemo.material: parent material: DeferredShading/Material/UntexturedPhong not found for new material:Test13/DeferredOgre/EarRing
+20:40:43: Error in material Test13/DeferredOgre/EarRing at line 147 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error in material Test13/DeferredOgre/EarRing at line 158 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error at line 166 of deferreddemo.material: parent material: DeferredShading/Material/TexturedPhong not found for new material:Test13/DeferredOgre/Tusks
+20:40:43: Error in material Test13/DeferredOgre/Tusks at line 172 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error in material Test13/DeferredOgre/Tusks at line 186 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error at line 197 of deferreddemo.material: parent material: DeferredShading/Material/TexturedPhong not found for new material:Test13/DeferredOgre/Eyes
+20:40:43: Error in material Test13/DeferredOgre/Eyes at line 203 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Error in material Test13/DeferredOgre/Eyes at line 217 of deferreddemo.material: Invalid fragment_program_ref entry - fragment program  has not been defined.
+20:40:43: Parsing script deferred.material
+20:40:43: GLSL compiled : DeferredShading/material/glsl/vsVertex shader was successfully compiled to run on hardware.
+
+20:40:43: GLSL compiled : DeferredShading/material/glsl/nm_vsVertex shader was successfully compiled to run on hardware.
+
+20:40:43: Parsing script deferred_post_multipass.material
+20:40:43: Parsing script RomanBath.material
+20:40:43: Parsing script Examples.compositor
+20:40:43: Parsing script sample.fontdef
+20:40:43: Parsing script emitted_emitter.particle
+20:40:43: Parsing script Example.particle
+20:40:43: Parsing script smoke.particle
+20:40:43: Parsing script Example-Water.particle
+20:40:43: Parsing script Example-DynTex.overlay
+20:40:43: Parsing script Example-Water.overlay
+20:40:43: Parsing script Example-CubeMapping.overlay
+20:40:43: Parsing script Compositor.overlay
+20:40:43: Parsing script DP3.overlay
+20:40:43: Parsing script Shadows.overlay
+20:40:43: Finished parsing scripts for resource group General
+20:40:43: Parsing scripts for resource group Internal
+20:40:43: Finished parsing scripts for resource group Internal
+20:40:43: Creating viewport on target 'ogre', rendering from camera 'StandardCamera', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
+20:40:43: Mesh: Loading cube.mesh.
+20:40:43: Can't assign material 1 - Default to SubEntity of tmpBoundsDefaultMeshObject.tmp because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:43: Can't assign material 1 - Default to SubEntity of cube.mesh_tmp_bounds_check because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:43: Can't assign material 1 - Default to SubEntity of serpent:1:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:43: Texture: spot_shadow_fade.png: Loading 1 faces(PF_B8G8R8,128x128x1) with 7 hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,128x128x1.
+20:40:43: WARNING: Texture instance 'Ogre/ShadowTexture0' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+20:40:43: Creating viewport on target 'rtt/Ogre/ShadowTexture0/27964784', rendering from camera 'Ogre/ShadowTexture0Cam', relative dimensions L: 0.00 T: 0.00 W: 1.00 H: 1.00 ZOrder: 0
+20:40:44: Can't assign material 1 - Default to SubEntity of serpent:2:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:45: Can't assign material 1 - Default to SubEntity of serpent:3:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:46: Can't assign material 1 - Default to SubEntity of serpent:4:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:47: Can't assign material 1 - Default to SubEntity of serpent:5:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:48: Can't assign material 1 - Default to SubEntity of serpent:6:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:49: Can't assign material 1 - Default to SubEntity of serpent:7:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:50: Can't assign material 1 - Default to SubEntity of serpent:8:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:51: Can't assign material 1 - Default to SubEntity of serpent:9:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:52: Can't assign material 1 - Default to SubEntity of serpent:10:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:53: Can't assign material 1 - Default to SubEntity of serpent:11:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:54: Can't assign material 1 - Default to SubEntity of serpent:12:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:55: Can't assign material 1 - Default to SubEntity of serpent:13:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:56: Can't assign material 1 - Default to SubEntity of serpent:14:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:57: Can't assign material 1 - Default to SubEntity of serpent:15:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:58: Can't assign material 1 - Default to SubEntity of serpent:16:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:40:59: Can't assign material 1 - Default to SubEntity of serpent:17:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:00: Can't assign material 1 - Default to SubEntity of serpent:18:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:01: Can't assign material 1 - Default to SubEntity of serpent:19:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:02: Can't assign material 1 - Default to SubEntity of serpent:20:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:03: Can't assign material 1 - Default to SubEntity of serpent:21:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:04: Can't assign material 1 - Default to SubEntity of serpent:22:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:05: Can't assign material 1 - Default to SubEntity of serpent:23:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:06: Can't assign material 1 - Default to SubEntity of serpent:24:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:07: Can't assign material 1 - Default to SubEntity of serpent:25:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:08: Can't assign material 1 - Default to SubEntity of serpent:26:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:09: Can't assign material 1 - Default to SubEntity of serpent:27:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:10: Can't assign material 1 - Default to SubEntity of serpent:28:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:11: Can't assign material 1 - Default to SubEntity of serpent:29:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:12: Can't assign material 1 - Default to SubEntity of serpent:30:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:13: Can't assign material 1 - Default to SubEntity of serpent:31:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:14: Can't assign material 1 - Default to SubEntity of serpent:32:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:15: Can't assign material 1 - Default to SubEntity of serpent:33:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:16: Can't assign material 1 - Default to SubEntity of serpent:34:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:17: Can't assign material 1 - Default to SubEntity of serpent:35:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:18: Can't assign material 1 - Default to SubEntity of serpent:36:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:19: Can't assign material 1 - Default to SubEntity of serpent:37:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:20: Can't assign material 1 - Default to SubEntity of serpent:38:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:21: Can't assign material 1 - Default to SubEntity of serpent:39:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:22: Can't assign material 1 - Default to SubEntity of serpent:40:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:23: Can't assign material 1 - Default to SubEntity of serpent:41:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:24: Can't assign material 1 - Default to SubEntity of serpent:42:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:25: Can't assign material 1 - Default to SubEntity of serpent:43:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:26: Can't assign material 1 - Default to SubEntity of serpent:44:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:27: Can't assign material 1 - Default to SubEntity of serpent:45:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:28: Can't assign material 1 - Default to SubEntity of serpent:46:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:29: Can't assign material 1 - Default to SubEntity of serpent:47:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:30: Can't assign material 1 - Default to SubEntity of serpent:48:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:31: Can't assign material 1 - Default to SubEntity of serpent:49:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:32: Can't assign material 1 - Default to SubEntity of serpent:50:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:33: Can't assign material 1 - Default to SubEntity of serpent:51:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:34: Can't assign material 1 - Default to SubEntity of serpent:52:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:35: Can't assign material 1 - Default to SubEntity of serpent:53:1 because this Material does not exist. Have you forgotten to define it in a .material script?
+20:41:36: Can't assign material 1 - Default to SubEntity of serpent:54:1 because this Material does not exist. Have you forgotten to define it in a .material script?

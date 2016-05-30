@@ -1,0 +1,22 @@
+include ../../GlobalMakeSettings.mk
+
+TEST=testReadWriteLock
+TEST_CC=testReadWriteLock.cc
+OBJ_CC=ReadWriteLock.cc
+OBJ_H=ReadWriteLock.h
+OBJ=ReadWriteLock.o
+TEST_DEPENDS=$(LOGGER) $(COMMONASPECT) $(OBJ)
+TEST_LIBS=-lpthread
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS)  
+	$(CC) $(CCFLAGS) $(TEST_CC) $(TEST_LIB_INC) $(TEST_LIBS) $(TEST_DEPENDS) -o $(TEST)
+
+include ../../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+clean:
+	rm -f $(TEST)
+	rm -f $(OBJ)
+	rm -f $(TEST_DEPENDS)

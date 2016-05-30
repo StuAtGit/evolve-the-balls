@@ -1,0 +1,408 @@
+Notify: in CommonAspect::setNotify
+Notify: entered LSystemGenericInterpreter::setAttributes
+Notify: In LSystemIncrementalInterpeter::grow()
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+tops: 0
+size of stack: 1
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+tops: 1
+size of stack: 2
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: unknown element: B1 in LSystemIncremetal::grow()
+Notify: In LSystemIncrementalInterpeter::grow()
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+tops: 3
+size of stack: 4
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+tops: 2
+size of stack: 3
+size of tops: 18446744073708732429
+tops: 2
+size of stack: 3
+size of tops: 18446744073708732429
+tops: 2
+size of stack: 3
+size of tops: 18446744073708732429
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+tops: 2
+size of stack: 3
+size of tops: 3
+Notify: In LSystemIncrementalInterpeter::grow()
+Warning: in LSystemIncrementalInterpreter::grow(), passed non-empty vector as newPoint argument, clearing it..
+Notify: In LSystemIncrementalInterpeter::grow()
+tops: 1
+size of stack: 2
+size of tops: 18446744073709551604

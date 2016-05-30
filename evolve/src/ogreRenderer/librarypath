@@ -1,0 +1,1 @@
+export LD_LIBRARY_PATH=/home/stu/programming/evolve/ogrenew/OgreMain/src/.libs/:/home/stu/programming/evolve/ogrenew/PlatformManagers/GLX/src/.libs/

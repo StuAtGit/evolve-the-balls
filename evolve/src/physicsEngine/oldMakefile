@@ -1,0 +1,23 @@
+include ../GlobalMakeSettings.mk
+
+TEST=testPhysicsEngine
+TEST_CC=testPhysicsEngine.cc
+OBJ=PhysicsEngine.o
+OBJ_CC=PhysicsEngine.cc
+#CCFLAGS += 
+
+all:$(TEST_DEPENDS) $(TEST)
+
+TEST_DEPENDS=$(LOGGER) $(COMMONASPECT) $(Ode) $(OBJ)
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) $(TEST_CC) -o $(TEST)
+
+include ../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+clean:
+	rm -f $(OBJ) $(LOGGER) $(COMMONASPECT) $(ODE)
+	rm -f $(TEST)

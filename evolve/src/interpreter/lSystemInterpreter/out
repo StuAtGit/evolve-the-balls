@@ -1,0 +1,2 @@
+../../../src/utilityFiles/matrix/Matrix.h: In member function ‘virtual bool evolve::LSystemIncrementalInterpreter::grow(std::vector<double, std::allocator<double> >&, unsigned int&)’:
+../../../src/utilityFiles/matrix/Matrix.h:330: warning: ‘mag’ may be used uninitialized in this function

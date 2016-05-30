@@ -1,0 +1,293 @@
+<EvolveCommands>
+    <LSystemServerCommand id="createCommand" status="implemented" >
+    create
+    </LSystemServerCommand>
+    
+    <LSystemServerCommand id="initCommand" status="implemented" >
+    init
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="startCommand" status="not implemented - deprecated" >
+    start
+    </LSystemServerCommand>
+    
+    <LSystemServerCommand id="stopCommand" status="implemented" >
+    stop
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="printCommand" status="implemented" >
+    print
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="destroyCommand" status="implemented" >
+    destroy
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="makeCopyCommand" status="implementing">
+    makeCopy
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getSystemCommand" status="implemented" >
+    getSystem
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getMaxCommand" status="implemented" >
+    getMax
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getMinCommand" status="implemented" >
+    getMin 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getIdsCommand" status="implemented" >
+    getIds 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getModeCommand" status="implemented" >
+    getMode 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getSystemLengthCommand" status="implemented" >
+    getStringSystemLength 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getProductionRulesCommand" status="implemented" >
+    getProductionRules 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getOptionsCommand" status="implemented" >
+    getOptionsCommand 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getMutationProbabilityCommand" status="implemented" >
+    getMutationProbability 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setMaxCommand" status="implemented" >
+    setMax 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setMinCommand" status="implemented" >
+    setMin 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setSystemCommand" status="implemented" >
+    setSystem 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setModeCommand" status="implemented" >
+    setMode 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setProductionCommand" status="implemented" >
+    setProduction 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="deleteProductionCommand" status="not implemented" >
+    deleteProduction
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setMutationProbabilitiesCommand">
+    setMutationProbabilities 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setMutationProbabilityCommand" status="not implemented" >
+    setMutationProbability 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="setOptionsCommand" status="implemented" >
+    setOptions 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="deleteOptionCommand" status="not implemented" >
+    deleteOption
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="loadCommand" status="implemented">
+    load 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="saveCommand" status="implemented">
+    save 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="runCommand" status="implemented">
+    run 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getMutationTypeDescriptionCommand" status="implemented">
+    getMutationTypeDescription
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="crossCommand" status="implementing">
+    cross 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="breedCommand" status="implementing">
+    breed 
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="getNewIdCommand" status="implementing">
+    getNewId
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="initFromFileCommand" status="not implemented">
+    initFromFile
+    </LSystemServerCommand>
+
+    <LSystemServerCommand id="initFromMapCommand" status="not implemented">
+    initFromMap
+    </LSystemServerCommand>
+ 
+    <ServerCommand id="reloadCommandHandler" status="implementing">
+    reloadHandler
+    </ServerCommand>
+
+    <LSystemServerRequest id="lSystemFileRequest">
+    Notify: Please send the lsystem file contents now:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="initMapRequest">
+    Notify: Please send the initialization map now:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="systemIdRequest">
+    Notify: please send the id of the system now:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="systemCrossMapRequest">
+    Notify: please crossover map for the systems now:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="optionsCrossMapRequest">
+    Notify: please crossover map for the options now:
+    </LSystemServerRequest>
+    
+    <LSystemServerRequest id="mutationProbabilitiesCrossMapRequest">
+    Notify: please crossover map for the mutation probabilities now:
+    </LSystemServerRequest>
+    
+    <LSystemServerRequest id="growthRulesCrossMapRequest">
+    Notify: please crossover map for the growth rules now:
+    </LSystemServerRequest>
+    
+    <LSystemServerRequest id="systemRequest">
+    Notify: please send system now:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="mutationProbabilitiesRequest">
+    Notify: please send mutation probabilities  now. Types supported are:1-4:Format is prob1:1:prob2:2:prob3:3:prob4:4
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="mutationProbabilityRequest">
+    Notify: please send mutation probability for type: 
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="mutationProbabilityTypeRequest">
+    Notify: please send the type of mutation your settting: 
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="optionNumberRequest">
+    Notify: please send number of options, max option size 
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="optionsRequest">
+    Notify: please send options now
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="getMaxRequest">
+    Notify: please send the max length of the system now
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="getMinRequest">
+    Notify: please send the min length of the system now
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="getModeRequest">
+    Notify: please send the new mode of the lsystem as an integer 0 (do nothing), 1 (mutate)  or 2 (grow)
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="runIterationRequest">
+    Notify: please send the number of iteration you wish to perform
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="startProductionRequest">
+    Notify: please send the start production:
+    </LSystemServerRequest>
+
+    <LSystemServerRequest id="endProductionRequest">
+    Notify: please send the end production: 
+    </LSystemServerRequest>
+
+    <LSystemServerMisc id="successReply">
+    Notify: command executed successfully
+    </LSystemServerMisc>
+    
+    <LSystemServerMisc id="failedReply">
+    Warning: failure executing command
+    </LSystemServerMisc>
+
+    <LSystemServerMisc id="endMessage">
+    _END_M
+    </LSystemServerMisc>
+
+    <LSystemServerMisc id="shutdownMessage">
+    SHUTDOWN
+    </LSystemServerMisc>
+
+    <LSystemInterpreterCommand id="createInterpreterIntCommand">
+    createInterpreter
+    </LSystemInterpreterCommand>
+
+    <LSystemInterpreterCommand id="loadAttributesIntCommand">
+    loadAttributes
+    </LSystemInterpreterCommand>
+
+    <LSystemInterpreterCommand id="saveAttributesIntCommand">
+    saveAttributes
+    </LSystemInterpreterCommand>
+    
+    <LSystemInterpreterCommand id="getSystemIntCommand">
+    getSystem
+    </LSystemInterpreterCommand>
+
+    <LSystemInterpreterCommand id="reloadConfigIntCommand">
+    reloadConfig
+    </LSystemInterpreterCommand>
+
+    <LSystemInterpreterCommand id="setAttributeIntCommand">
+    setAttribute
+    </LSystemInterpreterCommand>
+ 
+    <LSystemInterpreterCommand id="getAttributeIntCommand">
+    getAttribute
+    </LSystemInterpreterCommand>
+   
+	<LSystemInterpreterCommand id="getAttributeDescriptionIntCommand">
+    getAttributeDescription
+    </LSystemInterpreterCommand>
+
+	<LSystemInterpreterCommand id="getSupportedAttributesIntCommand">
+    getSupportedAttributes
+    </LSystemInterpreterCommand>
+
+    <LSystemInterpreterRequest id="getAttributeNameIntRequest" >
+    Notify: please send the name of the attribute now
+    </LSystemInterpreterRequest>
+
+    <LSystemInterpreterRequest id="getAttributeValueIntRequest" >
+    Notify: please send the value for the attribute now
+    </LSystemInterpreterRequest>
+   
+	<SocketConstant id="endMessageBlock">
+    _END_MESSAGE_BLOCK
+    </SocketConstant>
+
+    <IdConstant id="invalidId">
+    _INVALID_ID
+    </IdConstant>
+
+    <DefaultLibId id ="defaultLibId">
+    DEFAULT_LIB
+    </DefaultLibId>
+</EvolveCommands>

@@ -1,0 +1,62 @@
+<commandSequences>
+<commandSequence>
+    <command>
+        create
+    </command>
+</commandSequence>
+<commandSequence>
+    <command>
+        load
+    </command>
+</commandSequence>
+<commandSequence>
+    <command>
+        getSystem        
+    </command>
+    <request>
+        systemRequest
+    </request>
+    <reply type="const string&amp;" order="1">
+        system
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        makeCopy
+    </command>
+    <request>
+        systemIdRequest
+    </request>
+    <reply type="const string&amp;" order="1">
+        newId
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        setAttribute
+    </command>
+    <request>
+        getAttributeNameIntRequest
+    </request>
+    <reply type="const string&amp;" order="1">
+        attributeName
+    </reply>
+    <request>
+        getAttributeValueIntRequest
+    </request>
+    <reply type="const string&amp;" order="2">
+        attributeValue
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        getAttribute
+    </command>
+    <request>
+        getAttributeNameIntRequest
+    </request>
+    <reply type="const string&amp;" order="1">
+        attributeName
+    </reply>
+</commandSequence>
+</commandSequences>

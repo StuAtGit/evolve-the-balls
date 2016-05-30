@@ -1,0 +1,107 @@
+<commandSequences>
+<commandSequence>
+    <command>
+        create
+    </command>
+</commandSequence>
+<commandSequence>
+    <command>
+        getSystem
+    </command>
+</commandSequence>
+<commandSequence>
+    <command>
+        run
+    </command>
+    <request>
+        runIterationRequest
+    </request>
+    <reply type="unsigned int" order="1">
+        numberOfIterations
+    </reply>
+    <request>
+        getMode
+    </request>
+    <reply type="const string&amp;" order="2">
+        systemRunningMode
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        load
+    </command>
+</commandSequence>
+<commandSequence>
+    <command>
+        cross
+    </command>
+    <request>
+        systemId
+    </request>
+    <reply type="const string&amp;">
+        crossId
+    </reply>
+    <request>
+        systemCrossMap
+    </request>
+    <reply type="const map&lt;string,string&gt;&amp;" order="1">
+        systemCrossMap
+    </reply>
+    <request>
+        optionsCrossMap
+    </request>
+    <reply type="const map&lt;string,string&gt;&amp;" order="2">
+        optionsCrossMap
+    </reply>
+    <request>
+        mutationProbabilitiesCrossMap
+    </request>
+    <reply type="const map&lt;string,string&gt;&amp;" order="3">
+        mutationProbabilitiesCrossMap
+    </reply>
+    <request>
+        growthRulesCrossMap
+    </request>
+    <reply type="const map&lt;string,string&gt;&amp;" order="4">
+        growthRulesCrossMap
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        makeCopy
+    </command>
+    <request>
+        systemId
+    </request>
+    <reply type="const string&amp;" order="1">
+        newId
+    </reply>
+</commandSequence>
+<commandSequence>
+    <command>
+        __dummyCommand__
+    </command>
+    <request>
+        dummyVector
+    </request>
+    <reply type="const vector&lt;unsigned int&gt;&amp;" order="1">
+        dummyVectorUint
+    </reply>
+    <reply type="vector&lt;string&gt;" order="1">
+        dummyVectorString
+    </reply>
+    <reply type="vector&lt;string&gt;&amp;" order="1">
+        dummyVectorString
+    </reply>
+    <reply type="const map&lt;string,       string&gt;&amp;" order="1">
+        dummyMapSpaces
+    </reply>
+    <request>
+        dummyMap
+    </request>
+    <reply type="map&lt;string,string&gt;" order="2">
+        dummyMap
+    </reply>
+
+</commandSequence>
+</commandSequences>

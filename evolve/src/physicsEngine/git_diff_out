@@ -1,0 +1,315 @@
+diff --git a/src/physicsEngine/PhysicsEngine.cc b/src/physicsEngine/PhysicsEngine.cc
+index 12fef24..82d7147 100644
+--- a/src/physicsEngine/PhysicsEngine.cc
++++ b/src/physicsEngine/PhysicsEngine.cc
+@@ -14,6 +14,7 @@ PhysicsEngine::PhysicsEngine()
+     dWorldSetContactSurfaceLayer(this->worldId, 0.01);
+     this->running = true;
+     this->threaded = false;
++    this->workerCount = 0;
+ }
+ 
+ bool PhysicsEngine::addItem( const string& name, const vector<double>& pos, double radius )
+@@ -385,7 +386,7 @@ bool PhysicsEngine::startPhysics()
+     }
+     //no longer simple happy land from here on out... 
+     this->threaded = true;
+-    //yeah, yeah..
++    //yeah, yeah.. do I need to delete or not? Not sure how this works with threads...
+     pthread_t* pthread = new pthread_t();
+     pthread_attr_t* pthread_attr = new pthread_attr_t();
+     pthread_attr_init( pthread_attr );
+@@ -396,6 +397,8 @@ bool PhysicsEngine::startPhysics()
+         this->threaded = false;
+         return false;
+     }
++    pthread_attr_destroy( pthread_attr );
++    //delete pthread; wait for later, don't know what this will do
+     return true;
+ }
+ 
+@@ -405,8 +408,50 @@ void* evolve::physicsThread( void* pe )
+     while( _this->running )
+     {
+         _this->engineLock.writeLock();
++        _this->workerCount = 0; 
++
++        pthread_mutex_init( &_this->workerMutex, NULL );
++        pthread_cond_init( &_this->workerCondition, NULL );
++
++        //this will sequentially call nearCollisionCallback on all
++        //"possible" collisions (possible determined by ODE & the space you choose)
++        //each callback registers itself, and calls a worker thread.
++        //each thread deregisters (decrements the count) when done.
+         dSpaceCollide( _this->spaceId, _this, &nearCollisionCallback );
++        //since workers register before they start threads, we know
++        //that all have been invoked at this point, and therefore, it's OK
++        //to unlock the writelock (so the threads can go do their thing) on wait on this variable
+         _this->engineLock.unlock();
++
++        int mutex_ret=0;
++        if( (mutex_ret = pthread_mutex_lock( &(_this->workerMutex) ) ) != 0 )
++        {
++            _this->logger.print( "Error: in PhysicsEngine::physicsThread, failed to lock worker mutex: " + string(strerror( mutex_ret ) ) );
++            //spinlock - gracefully exiting is not really an option as ODE may not like that (with all the collision threads & dWorldQuickStep running)
++spinlock:
++            pthread_mutex_lock( &(_this->workerMutex ) );
++            while( _this->workerCount > 0 )
++            {
++                pthread_mutex_unlock( &(_this->workerMutex ) );
++                usleep( 1000 );
++                pthread_mutex_lock( &(_this->workerMutex ) );
++            }
++        }
++        else
++        {
++            int cond_ret=0;
++            while( _this->workerCount > 0 ) 
++            {
++                if( (cond_ret = pthread_cond_wait( &(_this->workerCondition), &(_this->workerMutex) ) ) != 0 )
++                {
++                    _this->logger.print( "Error: in PhysicsEngine::physicsThread, cond_wait failed: " + string( strerror( cond_ret ) ) );
++                    goto spinlock;
++                }
++            }
++        }
++
++        pthread_cond_destroy( &_this->workerCondition );
++        pthread_mutex_destroy( &_this->workerMutex );
+         usleep(1000);
+         _this->engineLock.writeLock();
+         dWorldQuickStep( _this->worldId, 1 );
+@@ -424,65 +469,124 @@ void* evolve::physicsThread( void* pe )
+  */
+ void evolve::nearCollisionCallback( void* pe, dGeomID id1, dGeomID id2 )
+ {
+-    PhysicsEngine* _this = (PhysicsEngine*)pe;
++    CallbackInfo* callbackInfo = new CallbackInfo();
++    PhysicsEngine* _this = callbackInfo->_this = (PhysicsEngine*)pe;
++    callbackInfo->id1 = id1;
++    callbackInfo->id2 = id2;
++
++    //do this before we invoked the thread, all these increments MUST be done when dSpaceCollide exits
++    //(decrements & signals) are done in the threads)
++    //yes, it needs to be guarded, because its possible that another thread could have started by the time we get here
++    //(technically, you might be able to depend on the fact that all the collision threads are waiting on the engineLock
++    //before updating any counts, but that slim pickins')
++    pthread_mutex_lock( &_this->workerMutex );
++    _this->workerCount++;
++    pthread_mutex_unlock( &_this->workerMutex );
+ 
+-    dBodyID b1 = dGeomGetBody( id1 );
+-    dBodyID b2 = dGeomGetBody( id2 );
+-/*
+-    dMass mass1;
+-    dMass mass2;
+-    
+-    dMassSetZero( &mass1 );
+-    dMassSetZero( &mass2 );
++    pthread_t* pthread = new pthread_t();
++    pthread_attr_t* pthread_attr = new pthread_attr_t();
++    pthread_attr_init( pthread_attr );
++    int ret = 0;
++    if( (ret = pthread_create( pthread, pthread_attr, &callbackThread, callbackInfo )) != 0 )
++    {
++        _this->logger.print( "Warning: in PhysicsEngine::nearCollisionCallback, callback thread failed: " + string( strerror( ret ) ) );
++    }
++    pthread_attr_destroy( pthread_attr );
++    //delete pthread; wait for later, don't know what this will do
+ 
+-    dMassSetSphere( &dmass, mass / 3.14159, 1 );
++}
++
++void* evolve::callbackThread( void* callbackInfo )
++{
+ 
+-    dBodyGetMass( b1, &mass1 );
+-    dBodyGetMass( b2, &mass2 );
+-    cout << "mass 1: " << mass1.mass << endl;
+-    cout << "mass 2: " << mass2.mass << endl;
+-*/
++    CallbackInfo* ci = (CallbackInfo*)callbackInfo;
++    PhysicsEngine* _this = ci->_this;
++    dGeomID id1 = ci->id1;
++    dGeomID id2 = ci->id2;
++
++    _this->engineLock.readLock();
++    dBodyID b1 = dGeomGetBody( id1 );
++    dBodyID b2 = dGeomGetBody( id2 );
++    dContactGeom* contactGeoms = NULL;
++    dContact* contacts = NULL;
+ 
+     if( b1 && b2 && dAreConnectedExcluding( b1, b2, dJointTypeContact ) )
+     {
+-        return;
++        _this->engineLock.unlock();
+     }
+-
+-    //TODO: ...
+-    //er, technically the second argument to dCollide is a "flag" whose lower 
+-    //16 bits is an integer with the max number of contacts. And the upper 16 bits
+-    //are "Reserved for future use". Yup, that's right.
+-    //Heck, these guys should write an RFC
+-    short max_contacts = 4;
+-    int num_contacts = 0;
+-    dContactGeom* contactGeoms = new dContactGeom[max_contacts]; //delete ?
+-    num_contacts = dCollide( id1, id2, (unsigned int)max_contacts, contactGeoms, sizeof(dContactGeom) );
+-    if( num_contacts == 0 )
++    else
+     {
+-        delete contactGeoms;
+-        return;
++        _this->engineLock.unlock();
++
++        //TODO: ...
++        //er, technically the second argument to dCollide is a "flag" whose lower 
++        //16 bits is an integer with the max number of contacts. And the upper 16 bits
++        //are "Reserved for future use". Yup, that's right.
++        //Heck, these guys should write an RFC
++        short max_contacts = 4;
++        int num_contacts = 0;
++        contactGeoms = new dContactGeom[max_contacts]; //delete ?
++        _this->engineLock.writeLock();
++        num_contacts = dCollide( id1, id2, (unsigned int)max_contacts, contactGeoms, sizeof(dContactGeom) );
++        _this->engineLock.unlock();
++
++        if( num_contacts != 0 )
++        {
++            contacts = new dContact[num_contacts];
++
++            for( int i = 0; i < num_contacts; ++i )
++            {
++                contacts[i].surface.mode = dContactBounce | dContactSoftCFM;
++                contacts[i].surface.mu = dInfinity;
++                contacts[i].surface.mu2 = 0;
++                contacts[i].surface.bounce = 0.3;
++                contacts[i].surface.bounce_vel = 0.3f;
++                contacts[i].surface.soft_cfm = 0.1f;
++                contacts[i].geom = contactGeoms[i];
++            }
++
++            for( int i = 0; i < num_contacts; ++i )
++            {
++                _this->engineLock.writeLock();
++                dJointID c = dJointCreateContact( _this->worldId, _this->contactJointGroup, &contacts[i] );
++                dJointAttach( c, b1, b2 );
++                _this->engineLock.unlock();
++            }
++        }
+     }
+ 
+-    dContact* contacts = new dContact[num_contacts];
+-    for( int i = 0; i < num_contacts; ++i )
++    //all ODE stuff done at this point, signal our completion
++    int ret = 0;
++    bool signal = false;
++    if( ( ret = pthread_mutex_lock( &(_this->workerMutex) ) ) != 0 ) 
++    {
++        _this->logger.print( "Error: in PhysicsEngine::callbackThread, failed to lock worker mutex: " + string( strerror(ret) ) );
++    }
++    _this->workerCount--; 
++    //don't bother signaling unless we're the last one... (note, mutex should be unlocked when we call signal)
++    if( _this->workerCount == 0 )
++    {
++        signal = true;
++    }
++    if( ( ret = pthread_mutex_unlock( &(_this->workerMutex) ) ) != 0 ) 
++    {
++        _this->logger.print( "Error: in PhysicsEngine::callbackThread, failed to unlock worker mutex: " + string( strerror(ret) ) );
++    }
++    if( signal && ( ret = pthread_cond_signal( &(_this->workerCondition) ) ) != 0 )
+     {
+-        contacts[i].surface.mode = dContactBounce | dContactSoftCFM;
+-        contacts[i].surface.mu = dInfinity;
+-        contacts[i].surface.mu2 = 0;
+-        contacts[i].surface.bounce = 0.3;
+-        contacts[i].surface.bounce_vel = 0.3f;
+-        contacts[i].surface.soft_cfm = 0.1f;
+-        contacts[i].geom = contactGeoms[i];
++        _this->logger.print( "Error: in PhysicsEngine::callbackThread, failed to signal worker condition: " + string( strerror(ret) ) );
+     }
+ 
+-    for( int i = 0; i < num_contacts; ++i )
++    delete ci;
++    if( contactGeoms != NULL )
+     {
+-        dJointID c = dJointCreateContact( _this->worldId, _this->contactJointGroup, &contacts[i] );
+-        dJointAttach( c, b1, b2 );
++        delete contactGeoms;
+     }
+-    
+-    delete contactGeoms;
+-    delete contacts;
++    if( contacts != NULL )
++    {
++        delete contacts;
++    }
++    pthread_exit( NULL );
++    return NULL;
+ }
+-
+ #endif
+diff --git a/src/physicsEngine/PhysicsEngine.h b/src/physicsEngine/PhysicsEngine.h
+index 95f2ef6..6e2f4fa 100644
+--- a/src/physicsEngine/PhysicsEngine.h
++++ b/src/physicsEngine/PhysicsEngine.h
+@@ -5,6 +5,8 @@
+ #include <string>
+ #include <vector>
+ 
++#include <pthread.h>
++
+ #include <ode/ode.h>
+ 
+ #include "CommonAspect.h"
+@@ -33,6 +35,11 @@ void nearCollisionCallback( void* _this, dGeomID id1, dGeomID id2 );
+  * main physics thread. Do not call this directly! Call PhysicsEngine::startPhysics()
+  */
+ void* physicsThread( void* _this );
++/**
++ * callback thread, not to be invoked directly by user.
++ */
++void* callbackThread( void* callbackInfo );
++struct CallbackInfo;
+ 
+ /**
+  * This class provides an interface to our physics engine.
+@@ -123,9 +130,22 @@ public:
+      * Hmm. you can have some pointer overflow fun with this.
+      */
+     friend void nearCollisionCallback( void* _this, dGeomID id1, dGeomID id2 );
++    //these two methods should NOT be called directly 
++    //would be protected except they need to be C
+     friend void* physicsThread( void* _this );
++    friend void* callbackThread( void* callbackInfo );
+ 
+ protected:
++    //for threaded collision handling, how do we know if all threads (& collisions
++    //have been "registered", so we don't quit prematurely?
++    //maybe we do? Only do X number of collisions per loop?
++    //interesting... But some things may never collide if we just keep checking 
++    //the same ones over and over..
++    pthread_mutex_t workerMutex;
++    pthread_cond_t workerCondition;
++    unsigned int workerCount;
++    bool working;
++
+     //the basic idea is that a lot of what we do is read-only operations, where
+     //we don't care greatly about reading behind or ahead
+     //So we only lock when we do write operations (i.e. call into ODE with some state change).
+@@ -159,5 +179,15 @@ protected:
+     dSpaceID spaceId;
+     dJointGroupID contactJointGroup;
+ };
++
++//no destructor deleting what _this points at!
++//that would be evil!
++struct CallbackInfo
++{
++    PhysicsEngine* _this;
++    dGeomID id1;
++    dGeomID id2;
++};
++
+ };
+ #endif

@@ -1,0 +1,58 @@
+Notes:
+This file should be generated from a program
+what stuff means:
+evolveHome - the directory holding all of evolve's source
+Assumes:
+If you have an object named foo, it has a cc file named foo.cc and a h file named foo.h, and
+a test named testFoo.cc
+If you have an dependency of type object, it can be built by cd'ing to the location of the object, issuing
+"make", and then creating a symbolic link from object_location/objectName to the current directory
+
+<evolveHome>
+/home/stu/programming/evolve
+</evolveHome>
+<object>
+    <objectName>
+    ReadWriteLock
+    </objectName>
+    <dependencies>
+        <dependency type="object">
+            <name label="COMMON_ASPECT">
+            CommonAspect.o
+            </name>
+            <location root="evolveHome">
+            /utilityFiles/logger
+            </location>
+        </dependency>
+        <dependency type="object">
+            <name label="LOGGER">
+            Logger.o
+            </name>
+            <location root="evolveHome">
+            /utilityFiles/logger
+            </location>
+        </dependency>
+        <dependency type="includeFile">
+            <name>
+            Utility.h
+            </name>
+            <location root="evolveHome">
+            /utilityFiles
+            </location>
+        </dependency>
+    </dependencies>
+</object>
+<compilerOptions>
+    <compiler>
+    g++
+    </compiler>
+    <compilerFlags>
+    -ggdb3 -Wall -O3
+    </compilerFlags>
+    <linkedLibrary>
+        <include>
+        </include>
+        <libraryName>
+        </libraryName>
+    </linkedLibrary>
+</compilerOptions>

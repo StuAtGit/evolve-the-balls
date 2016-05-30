@@ -1,0 +1,18 @@
+include ../../GlobalMakeSettings.mk
+
+TEST=testMatrix
+TEST_CC=testMatrix.cc
+TEST_DEPENDS=$(LOGGER)
+
+all:$(TEST)
+
+$(TEST):$(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_CC) $(TEST_DEPENDS) -o $(TEST)
+
+include ../../GlobalMakeTargets.mk
+
+.PHONY:clean
+
+clean:
+	rm -f $(TEST)
+	rm -f $(TEST_DEPENDS)

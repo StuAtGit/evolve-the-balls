@@ -1,0 +1,109 @@
+#ifndef Stu_InterpreterInterface_CC
+#define Stu_InterpreterInterface_CC
+
+#include "InterpreterInterface.h"
+
+InterpreterInterface::InterpreterInterface( const string& id )
+{
+    this->id = id;
+    this->socket = -1;
+    return;
+}
+
+bool InterpreterInterface::createRemote( const string& id, const string& ip, int port, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool createRemote(const string& id, const string& ip, int port, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+InterpreterInterface::~InterpreterInterface()
+{
+    close( this->socket );
+}
+
+bool InterpreterInterface::getSystem( string& interpreterSystem, LSystem& lsystem, unsigned int start, unsigned int finish, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool getSystem(string& interpreterSystem, LSystem& lsystem, unsigned int start, unsigned int finish, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::saveAttributes( const string& filename, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool saveAttributes(const string& filename, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::loadAttributes( const string& filename, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool loadAttributes(const string& filename, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::setAttributes( const map<string,string>& attributes, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool setAttributes(const map<string,string>& attributes, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::setId( const string& id, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool setId(const string& id, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+map<string,string> InterpreterInterface::getAttributes(  bool printDebug )
+{
+    logger.print( "Notify: entered method: map<string,string> getAttributes( bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    map<string,string> ret;
+    return ret;
+}
+
+string InterpreterInterface::getAttributeValue( const string& attributeName, bool printDebug )
+{
+    logger.print( "Notify: entered method: string getAttributeValue(const string& attributeName, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    string ret;
+    return ret;
+}
+
+string InterpreterInterface::getAttributeDescription( const string& attributeName, bool printDebug )
+{
+    logger.print( "Notify: entered method: string getAttributeDescription(const string& attributeName, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    string ret;
+    return ret;
+}
+
+vector<string> InterpreterInterface::getSupportedAttributes(  bool printDebug )
+{
+    logger.print( "Notify: entered method: vector<string> getSupportedAttributes( bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    vector<string> ret;
+    return ret;
+}
+
+bool InterpreterInterface::isSupported( const string& attributeName, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool isSupported(const string& attributeName, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::getCopy( Interpreter*& copy, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool getCopy(Interpreter*& copy, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+bool InterpreterInterface::getId( string& id, bool printDebug )
+{
+    logger.print( "Notify: entered method: bool getId(string& id, bool printDebug)  of class InterpreterInterface", this->doNotify && printDebug );
+    bool ret;
+    return ret;
+}
+
+#endif

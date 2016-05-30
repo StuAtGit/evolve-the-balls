@@ -1,0 +1,2 @@
+##We have to make sure to make logger -> commonAspect -> everything else.
+SUBDIRS =  utilityFiles/logger commonAspect utilityFiles/timer utilityFiles/commands utilityFiles/matrix utilityFiles/mutex utilityFiles/readWriteLock utilityFiles/socketMethods system/lSystem interpreter/lSystemInterpreter server/commandHandler server/systemCommandHandler server/interpreterCommandHandler server/ physicsEngine/ worldObject/ worldObject/staticWorldObject worldObject/staticSphereObject worldObject/lSystemWorldObject ogreRenderer/ogreGDKCodec ogreRenderer

@@ -1,0 +1,27 @@
+include ../../GlobalMakeSettings.mk
+
+OBJ=LSystemGeneric.o
+OBJ_CC=LSystemGeneric.cc
+OBJ_H=LSystemGeneric.h
+TEST = testLSystem 
+TEST_CC = testLSystem.cc
+TEST_DEPENDS=$(COMMONASPECT) $(LOGGER) $(OBJ)
+
+#this is necessary because this object is compiled into the linked library
+CCFLAGS += -fPIC
+
+all:$(TEST)
+
+$(TEST):$(TEST_DEPENDS) $(TEST_CC) 
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) $(TEST_CC) -o $(TEST) 
+
+include ../../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC) $(OBJ_H)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+.PHONY:clean
+
+clean:
+	rm -f $(TEST)
+	rm -f $(TEST_DEPENDS)

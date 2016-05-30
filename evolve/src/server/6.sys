@@ -1,0 +1,14 @@
+maxSize 0
+minSize 100
+options R,S,L,U
+system S
+mutationRules (1,0) (2,0) (3,0) (4,0) 
+growthRules S:Y,U,L,S,S,D,R,X.Y:D,R,S,U,L.X:S,R,D,L,U,R,S
+numSteps 0
+numSwaps 0
+swappedLeft 0
+swappedRight 0
+numToggled 0
+numDeleted 0
+numDoubled 0
+currentGene 0

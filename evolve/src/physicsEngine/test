@@ -1,0 +1,20 @@
+Starting program: /home/stu/evolve/physicsEngine/testPhysicsEngine 
+Error in re-setting breakpoint 1:
+No source file named util.cpp.
+Breakpoint 1 at 0x2b8e9ac41816: file util.cpp, line 202.
+[Thread debugging using libthread_db enabled]
+[New Thread 47891498311520 (LWP 20755)]
+gravity: 0,-10,0
+before: 
+pos 1: 0,10,0
+pos 2: 0,50,0
+attempting to locate source of NaN
+[Switching to Thread 47891498311520 (LWP 20755)]
+
+Breakpoint 1, dxStepBody (b=0x60f680, h=1) at util.cpp:202
+202       if (b->flags & dxBodyFlagFiniteRotation) {
+(gdb) display b->avel
+1: b->avel = {-nan(0x400000), -nan(0x400000), -nan(0x400000), 0}
+(gdb) display b->posr.pos
+2: b->posr.pos = {0, 37, 0, 0}
+

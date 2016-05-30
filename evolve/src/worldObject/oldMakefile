@@ -1,0 +1,25 @@
+include ../GlobalMakeSettings.mk
+
+TEST=testWorldObject
+TEST_CC=testWorldObject.cc
+OBJ=WorldObject.o
+OBJ_CC=WorldObject.cc
+#CCFLAGS += 
+all:$(TEST_DEPENDS) $(TEST)
+
+TEST_DEPENDS=$(LOGGER) $(COMMONASPECT) $(PhysicsEngine) $(Ogre) $(Ode) $(OBJ) 
+#don't keep -lode from $(Ode)
+TEST_CLEAN_DEPENDS=$(LOGGER) $(COMMONASPECT) $(PhysicsEngine) $(Ogre) $(ODE) $(OBJ) 
+
+
+$(TEST):$(TEST_CC) $(TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(TEST_DEPENDS) $(TEST_CC) -o $(TEST)
+
+include ../GlobalMakeTargets.mk
+
+$(OBJ):$(OBJ_CC)
+	$(CC) $(CCFLAGS) -c $(OBJ_CC) -o $(OBJ)
+
+clean:
+	rm -f $(TEST_CLEAN_DEPENDS)
+	rm -f $(TEST)

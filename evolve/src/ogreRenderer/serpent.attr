@@ -1,0 +1,11 @@
+LeftAngle -70
+RightAngle 70
+UpAngle 70
+DownAngle -70
+Mesh cube.mesh
+MeshMap S,cube.mesh,box
+StartDirection 0,0,1
+JointType slider 
+Physics on
+GrowthRate 1.0
+PhysicsUpdateRate 1.0 

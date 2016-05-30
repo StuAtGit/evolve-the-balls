@@ -1,0 +1,15 @@
+TEST=testSocketMethods.cc
+COMMANDS=Commands.o Commands.class Commands.php
+all: $(COMMANDS)
+
+$(COMMANDS):Commands.xml commandGenerator.py
+	python commandGenerator.py
+	$(CC) -c -fPIC -Wall -ggdb3 Commands.cc
+	javac Commands.java
+
+.PHONY:clean
+
+distclean:
+	rm -f $(COMMANDS)
+clean:
+	rm -f $(COMMANDS)

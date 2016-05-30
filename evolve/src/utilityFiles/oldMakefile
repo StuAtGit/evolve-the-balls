@@ -1,0 +1,32 @@
+EVOLVE_HOME=/home/stu/programming/evolve
+LOGGER_LOCATION=$(EVOLVE_HOME)/utilityFiles/logger
+
+GLOB_TEST=testGlob
+GLOB_TEST_CC=testGlob.cc
+GLOB_TEST_DEPENDS=$(LOGGER)
+
+include ../GlobalMakeSettings.mk
+
+UTILITIES=$(TIMER) $(COMMANDS) $(LOGGER) $(MATRIX) $(MUTEX) \
+		  $(READWRITELOCK) $(SOCKETMETHODS)
+
+all:$(UTILITIES) $(GLOB_TEST)
+
+$(GLOB_TEST):$(GLOB_TEST_CC) $(GLOB_TEST_DEPENDS)
+	$(CC) $(CCFLAGS) $(GLOB_TEST_DEPENDS) $(GLOB_TEST_CC) -o $(GLOB_TEST)
+
+include ../GlobalMakeTargets.mk
+
+clean:
+	rm -f $(GLOB_TEST) $(UTILITIES)
+
+clean_all:
+	make clean
+	cd $(TIMER_LOCATION) && make clean
+	cd $(COMMANDS_LOCATION) && make clean
+	cd $(LOGGER_LOCATION) && make clean
+	cd $(MATRIX_LOCATION) && make clean
+	cd $(MUTEX_LOCATION) && make clean
+	cd $(READWRITELOCK_LOCATION) && make clean
+	cd $(SOCKETMETHODS_LOCATION) && make clean
+	cd $(TIMER_LOCATION) && make clean
